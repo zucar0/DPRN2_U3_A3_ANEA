@@ -16,8 +16,8 @@ abstract class Foto{
             System.Console.WriteLine("Se ingrsaron datos inválidos.");
         }
     }
-    public abstract string almacenarFotos();
-    public abstract string revisarFila();
+    public abstract int almacenarFotos();
+    public abstract int revisarFila();
     //Interfaz para el pais
     public int DatoFila{
         get{
