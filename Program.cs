@@ -26,6 +26,17 @@ namespace DPRN2_U3_A3_ANEA
             //     return new string(Enumerable.Repeat(chars, length)
             //     .Select(s => s[random.Next(s.Length)]).ToArray());
             // }
+
+
+            //Este programa debe de pedir el número de filas y columnas para poder definir un arreglo bidimensional
+
+            //Almacenar en cada posición (i,j)
+
+            //Solicitar cual fila de la matriz se requiere revisar
+
+            // implementar los algoritmos necesarios para  analizar que colores tienen las fotografías de esa fila, para finalmente, indicar si es a color o en b/n.
+            
+            //Recomendación, aunque se indica que el arreglo bidimensional o matriz  puede tener un índice entre 1 y 100, sólo es para condicionar ese tamaño, para las pruebas, con que se cree una matriz que no se mayor a 5 x 5 es suficiente.    
             var chars = "CMYWGB";
             var stringChars = new char[8];
             var random = new Random();
