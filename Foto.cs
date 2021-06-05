@@ -17,7 +17,6 @@ abstract class Foto{
         }
     }
     public abstract int almacenarFotos();
-    public abstract int revisarFila();
     //Interfaz para el pais
     public int DatoFila{
         get{
