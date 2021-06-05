@@ -28,26 +28,43 @@ namespace DPRN2_U3_A3_ANEA
             // }
 
 
-            //Este programa debe de pedir el número de filas y columnas para poder definir un arreglo bidimensional
-
-            //Almacenar en cada posición (i,j)
-
+            //Este programa debe de pedir el número de filas y columnas 
+            System.Console.WriteLine("Ingresar el número de filas: ");  
+            var numeroDeFilas = System.Console.ReadLine();
+            int numFilas = int.Parse(numeroDeFilas);
+            System.Console.WriteLine("Ingresar el número de columnas: ");
+            var numeroDeColumnas = System.Console.ReadLine();
+            int numColumnas = int.Parse(numeroDeColumnas);
+            //Definir un arreglo bidimensional
+            string[,] bidimensional;
+            bidimensional=new string[numFilas,numColumnas];
+            //(Rellenar matriz) Almacenar en cada posición (i,j)
+            //El primer for entra a la fila
+            for(int filas=0; filas<bidimensional.GetLength(0);filas++)
+            {
+                //El segundo for va a leer cada una de las columnas
+                for( int columnas = 0; columnas<bidimensional.GetLength(1); columnas++)
+                {
+                    var chars = "CMYWGB";
+                    var stringChars = new char[1];
+                    var random = new Random();
+                    for (int i = 0; i < stringChars.Length; i++)
+                    {
+                        stringChars[i] = chars[random.Next(chars.Length)];
+                    }
+                    var finalString = new String(stringChars);
+                    System.Console.WriteLine(finalString);
+                    bidimensional[filas,columnas] = finalString;
+                }
+            }
             //Solicitar cual fila de la matriz se requiere revisar
+            System.Console.WriteLine("Indicar el número de la foto que requieres revisar: ");
+            var numeroDeFoto = System.Console.ReadLine();
 
             // implementar los algoritmos necesarios para  analizar que colores tienen las fotografías de esa fila, para finalmente, indicar si es a color o en b/n.
             
             //Recomendación, aunque se indica que el arreglo bidimensional o matriz  puede tener un índice entre 1 y 100, sólo es para condicionar ese tamaño, para las pruebas, con que se cree una matriz que no se mayor a 5 x 5 es suficiente.    
-            var chars = "CMYWGB";
-            var stringChars = new char[8];
-            var random = new Random();
-
-            for (int i = 0; i < stringChars.Length; i++)
-            {
-                stringChars[i] = chars[random.Next(chars.Length)];
-            }
-
-            var finalString = new String(stringChars);
-            System.Console.WriteLine(finalString);
+            
         }
     }
 }
